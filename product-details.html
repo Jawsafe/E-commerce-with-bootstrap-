@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce - Details</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Font API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .small-img-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .small-img-col {
+            flex-basis: 24%;
+            cursor: pointer;
+        }
+
+        .de-product select {
+            display: block;
+            padding: 5px 10px;
+        }
+
+        .de-product input {
+            width: 50px;
+            height: 40px;
+            padding-left: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .de-product input:focus {
+            outline: none;
+        }
+
+        .shop-btn {
+            background: rgb(253, 103, 49);
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+
+        /* @media (max-width: 100px) {
+            .container,
+            .container-sm {
+                max-width: 480px; 
+                margin: 50px; 
+            }
+        } */
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
+        <div class="container">
+            <img src="https://jawsafe.github.io/my-photos/e-commerce/image1/logo4(1).png" alt="logo">
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span><i id="bar" class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home-page.html">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="shop-page.html">shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog-page.html">blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">contacts</a>
+                    </li>
+                    <li class="nav-icon">
+                        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+                    <li class="nav-icon">
+                        <a href="shop-cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product details -->
+    <section class="de-product px-3 my-5 pt-5 container">
+        <div class="row mt-5">
+            <div class="col-lg-5 col-md-12 col-12">
+                <img class="img-fluid w-100 pb-1" id="main-image"
+                    src="https://jawsafe.github.io/my-photos/e-commerce/image3/shop/1.jpg" alt=".">
+                <div class="small-img-group">
+                    <div class="small-img-col">
+                        <img src="https://jawsafe.github.io/my-photos/e-commerce/image3/shop/1.jpg" width="100%"
+                            class="small-img" alt=".">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="https://jawsafe.github.io/my-photos/e-commerce/image3/shop/26.jpg" width="100%"
+                            class="small-img" alt=".">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="https://jawsafe.github.io/my-photos/e-commerce/image3/shop/25.jpg" width="100%"
+                            class="small-img" alt=".">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="https://jawsafe.github.io/my-photos/e-commerce/image3/shop/24.jpg" width="100%"
+                            class="small-img" alt=".">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 pt-5">
+                <h6>Product: Shirt</h6>
+                <h3 class="py-4">T-shirt (Men)</h3>
+                <h2>₱2579.89</h2>
+                <select name="size" id="size" class="my-3">
+                    <option value="">Select Size</option>
+                    <option value="">X-Small</option>
+                    <option value="">Small</option>
+                    <option value="">Medium</option>
+                    <option value="">Large</option>
+                    <option value="">X-large</option>
+                </select>
+                <input type="number" name="quantity" id="quantity" value="1" min="1">
+                <button class="shop-btn">Add to cart</button>
+                <h4 class="my-5">Product Details: </h4>
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                    sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features section -->
+    <section id="feature" class="main-feature ">
+        <div class="container text-center mt-5 py-5">
+            <h3 class="heading">Products you may like </h3>
+            <hr class="mx-auto">
+        </div>
+        <div class="row mx-auto container-fluid">
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="https://jawsafe.github.io/my-photos/e-commerce/image3/shop/7.jpg"
+                    alt=".">
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <h5 class="product-name text-capitalize">Featured product</h5>
+                <h4 class="product-price">₱2579.89</h4>
+                <button class="shop-btn" type="button">buy now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="https://jawsafe.github.io/my-photos/e-commerce/image3/shop/6.jpg"
+                    alt=".">
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <h5 class="product-name text-capitalize">Featured product</h5>
+                <h4 class="product-price">₱2579.89</h4>
+                <button class="shop-btn" type="button">buy now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="https://jawsafe.github.io/my-photos/e-commerce/image3/featured/2.jpg"
+                    alt=".">
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <h5 class="product-name text-capitalize">Featured product</h5>
+                <h4 class="product-price">₱2579.89</h4>
+                <button class="shop-btn" type="button">buy now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="https://jawsafe.github.io/my-photos/e-commerce/image3/featured/3.jpg"
+                    alt=".">
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <h5 class="product-name text-capitalize">Featured product</h5>
+                <h4 class="product-price">₱2579.89</h4>
+                <button class="shop-btn" type="button">buy now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="main-contact" id="contact">
+        <div class="row container info mx-auto pt-3">
+            <div class="first">
+                <img src="https://jawsafe.github.io/my-photos/e-commerce/image1/logo4(1).png" alt=".">
+                <!-- I am using fake address and fake other info-->
+                <h6>Address: </h6>
+                <p class="text-capitalize">1847 Santa Rita Street, Guadalupe Nuevo 1212 Quezon City, <br> Quezon City,
+                    9312635</p>
+                <h6>Contact number: </h6>
+                <p>907-723-2111</p>
+                <h6>Email address: </h6>
+                <p>adi.nugroho@email.com</p>
+                <div class="social-icon">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="second">
+                <h4>Support</h4>
+                <p>contact us</p>
+                <p>about page</p>
+                <p>size guide</p>
+                <p>shopping & returns</p>
+                <p>privacy</p>
+            </div>
+            <div class="third">
+                <h4>Shopping</h4>
+                <p>men's</p>
+                <p>women's</p>
+                <p>kid's</p>
+                <p>furniture</p>
+                <p>sales & discounts</p>
+            </div>
+            <div class="fourth">
+                <h4>Company</h4>
+                <p>about</p>
+                <p>blog</p>
+                <p>affiliate</p>
+                <p>login</p>
+            </div>
+            <div class="fifth">
+                <h4>subscribe</h4>
+                <p>Recieve updates, hot deals, discounts, & sales straight in your inbox daily.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <h3>Sample project by <a href="#">Jawsafe</a></h3>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="java.js"></script>
+</body>
+
+</html>

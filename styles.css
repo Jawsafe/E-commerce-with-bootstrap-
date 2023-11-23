@@ -1,0 +1,457 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none !important;
+  font-family: "Josefin sans", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1d1d1d;
+}
+
+h6 {
+  color: #d8d8d8;
+}
+
+.container {
+  padding: 10px 0 !important;
+  margin: 0 1rem 0 2rem;
+}
+
+.shop-btn {
+  font-size: 0.8rem;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  background-color: #1d1d1d;
+  color: aliceblue;
+  padding: 13px 30px;
+  border-radius: 1.5rem;
+  text-transform: uppercase;
+  transition: 0.3 ease;
+  cursor: pointer;
+}
+.shop-btn:hover {
+  background-color: rgb(253, 103, 49);
+}
+
+.navbar {
+  padding: 1% 5%;
+  font-size: 1.3rem;
+  position: fixed !important;
+  width: 100% !important;
+  left: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.navbar img {
+  max-height: 40px;
+  max-width: 100%;
+  margin-left: 20px;
+}
+.navbar .container .navbar-toggler {
+  border: none;
+  outline: none;
+}
+.navbar .container .navbar-toggler:hover #bar, .navbar .container .navbar-toggler:active #bar {
+  color: white;
+}
+.navbar .container .navbar-toggler #bar {
+  font-size: 1.6rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: black;
+}
+.navbar .container .navbar-nav .nav-item .nav-link {
+  padding: 0 20px;
+  color: black;
+  transition: 0.3s ease;
+  text-transform: capitalize;
+}
+.navbar .container .navbar-nav .nav-item .nav-link:hover, .navbar .container .navbar-nav .nav-item .nav-link.active {
+  color: coral;
+}
+.navbar .container .navbar-nav .nav-item .nav-link ul {
+  transition: 0.3s ease;
+  border: none;
+}
+.navbar .container .navbar-nav .nav-icon {
+  padding-right: 10px;
+  transition: 0.3s ease;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.navbar .container .navbar-nav .nav-icon a {
+  color: black;
+}
+.navbar .container .navbar-nav .nav-icon a i {
+  margin: 0 10px;
+}
+.navbar .container .navbar-nav .nav-icon a i:hover, .navbar .container .navbar-nav .nav-icon a i.active {
+  color: coral;
+}
+
+.main-home {
+  padding: 5% 10%;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1508162245510-bf2772371e86?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTk5NzA1MzV8&ixlib=rb-4.0.3&q=85);
+  background-position: center;
+  display: grid;
+  background-size: cover;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+}
+.main-home span {
+  color: coral;
+}
+.main-home .main-text {
+  text-transform: capitalize;
+}
+.main-home .main-text h5 {
+  font-size: 1.2rem;
+  font-style: oblique;
+}
+.main-home .main-text h1 {
+  font-size: 4rem;
+}
+.main-home .main-text p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.main-new {
+  padding: 2% 0 0;
+}
+.main-new hr {
+  width: 40%;
+  height: 2px;
+  border: 2px solid rgb(255, 65, 12);
+  border-radius: 5rem;
+}
+.main-new .one {
+  position: relative;
+}
+.main-new .one:nth-child(2):hover .details {
+  cursor: pointer;
+  background-color: rgba(252, 178, 178, 0.7);
+}
+.main-new .one:nth-child(3):hover .details {
+  cursor: pointer;
+  background-color: rgba(195, 252, 178, 0.7);
+}
+.main-new .one:nth-child(1):hover .details {
+  cursor: pointer;
+  background-color: rgba(178, 199, 252, 0.7);
+}
+.main-new .one img {
+  width: 90%;
+  height: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border: 1px solid #1d1d1d;
+}
+.main-new .one .details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease;
+  text-transform: capitalize;
+}
+.main-new .one .details button {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2a2a2a;
+  background: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid #2a2a2a;
+  padding: 3px;
+  transform: translateY(70px);
+  transition: 0.3 ease;
+}
+.main-new .one .details button:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.main-brand {
+  border-bottom: 3px solid black;
+}
+
+.main-feature,
+.main-clothes,
+.main-watch,
+.main-shoes {
+  padding: 2% 0 0;
+}
+.main-feature hr,
+.main-clothes hr,
+.main-watch hr,
+.main-shoes hr {
+  width: 40%;
+  height: 2px;
+  border: 2px solid rgb(255, 65, 12);
+  border-radius: 5rem;
+}
+.main-feature .product,
+.main-clothes .product,
+.main-watch .product,
+.main-shoes .product {
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.main-feature .product:hover img,
+.main-clothes .product:hover img,
+.main-watch .product:hover img,
+.main-shoes .product:hover img {
+  opacity: 0.6;
+  transform: scale(0.96);
+}
+.main-feature .product:hover .shop-btn,
+.main-clothes .product:hover .shop-btn,
+.main-watch .product:hover .shop-btn,
+.main-shoes .product:hover .shop-btn {
+  transform: translateY(0);
+  opacity: 1;
+}
+.main-feature .product:hover .shop-btn:hover,
+.main-clothes .product:hover .shop-btn:hover,
+.main-watch .product:hover .shop-btn:hover,
+.main-shoes .product:hover .shop-btn:hover {
+  background: #1d1d1d;
+}
+.main-feature .product img,
+.main-clothes .product img,
+.main-watch .product img,
+.main-shoes .product img {
+  transition: all 0.3s ease;
+}
+.main-feature .product .shop-btn,
+.main-clothes .product .shop-btn,
+.main-watch .product .shop-btn,
+.main-shoes .product .shop-btn {
+  background: rgb(253, 103, 49);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s;
+}
+.main-feature .product .rating,
+.main-clothes .product .rating,
+.main-watch .product .rating,
+.main-shoes .product .rating {
+  padding: 5px 0;
+}
+.main-feature .product .rating i,
+.main-clothes .product .rating i,
+.main-watch .product .rating i,
+.main-shoes .product .rating i {
+  font-size: 1rem;
+  color: goldenrod;
+}
+
+.main-banner {
+  padding: 5% 10%;
+  width: 100%;
+  height: 60vh;
+  background-image: url(https://jawsafe.github.io/my-photos/e-commerce/image5/banner/b4.jpg);
+  background-position: top 70px center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  align-items: flex-start;
+  justify-content: center;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+.main-banner h4 {
+  color: #2a2a2a;
+  font-style: italic;
+}
+.main-banner h1 {
+  color: #1d1d1d;
+}
+.main-banner h1 span {
+  color: rgba(255, 37, 110, 0.8);
+}
+.main-banner button {
+  background-color: rgb(253, 103, 49);
+}
+.main-banner button:hover {
+  background-color: #1d1d1d;
+}
+
+.main-blog {
+  padding: 2% 0 0;
+  border-top: 3px solid black;
+}
+.main-blog hr {
+  width: 40%;
+  height: 2px;
+  border: 2px solid rgb(255, 65, 12);
+  border-radius: 5rem;
+}
+.main-blog .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, auto));
+}
+.main-blog .row .one img {
+  width: 380px;
+  height: auto;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+.main-blog .row .one p {
+  color: #2a2a2a;
+  font-size: 15px;
+  max-width: 380px;
+  line-height: 25px;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+.main-blog .row .one .blog-text a {
+  color: black;
+}
+.main-blog .row .one .blog-text a:hover {
+  color: coral;
+}
+
+.main-contact {
+  padding: 5% 10%;
+  background-color: rgba(101, 101, 101, 0.8);
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+.main-contact .info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, auto));
+  gap: 4rem;
+}
+.main-contact .info h4 {
+  color: black;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.main-contact .info p {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.main-contact .info p:hover {
+  color: rgb(253, 103, 49);
+}
+.main-contact .first img {
+  width: 140px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.main-contact .first .social-icon {
+  margin-top: 10px;
+}
+.main-contact .first .social-icon i {
+  color: black;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: all 0.4s;
+}
+.main-contact .first .social-icon i:hover {
+  color: rgb(253, 103, 49);
+}
+
+#footer {
+  padding: 1rem;
+  width: 100%;
+  background: black;
+}
+#footer h3,
+#footer h5 {
+  text-align: center;
+  color: white;
+  padding-top: 0.4rem;
+}
+#footer a {
+  color: #6c73f5;
+}
+
+#blog-container .post:hover img {
+  transform: scale(1.1) rotate(-4deg);
+  opacity: 0.86;
+}
+#blog-container .post:hover h3 {
+  color: coral;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#blog-container .post .post-img {
+  cursor: pointer;
+  overflow: hidden;
+}
+#blog-container .post img {
+  transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar .navbar-toggler:hover,
+  .navbar .navbar-toggler:focus {
+    background-color: rgb(253, 103, 49);
+  }
+  .navbar .navbar-toggler:hover .navbar-collapse .collapse.show,
+  .navbar .navbar-toggler:focus .navbar-collapse .collapse.show {
+    background-color: white;
+  }
+  .navbar ul {
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+  }
+  .navbar ul li:nth-child(n) a,
+  .navbar ul li:nth-child(n) i, .navbar ul li:hover a,
+  .navbar ul li:hover i {
+    margin: 0.5rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

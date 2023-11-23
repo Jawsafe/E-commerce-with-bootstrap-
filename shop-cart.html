@@ -1,0 +1,428 @@
+<!doctype hmtl>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce - Blogs</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Font API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        #cart .container .heading {
+            font-weight: bold;
+        }
+
+        #cart-container {
+            overflow-x: auto;
+        }
+
+        #cart-container table {
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+            white-space: nowrap;
+        }
+
+        #cart-container table thead {
+            font-weight: 700;
+            border: 1.5px solid black;
+        }
+
+        #cart-container table thead td {
+            background-color: coral;
+            color: white;
+            text-align: center;
+            border: none;
+            padding: 6px 0;
+        }
+
+        #cart-container table tbody img {
+            width: -moz-fit-content;
+            width: -webkit-fit-content;
+            width: fit-content;
+            height: 80px;
+            object-fit: cover;
+        }
+
+
+        #cart-container table tbody i {
+            color: #8d8c89;
+        }
+
+        #cart-container table tbody i:hover {
+            color: coral;
+        }
+
+        #cart-container table td {
+            border: 1.5px solid black;
+            text-align: center;
+            border-top: none;
+        }
+
+        #cart-container table td:nth-child(6) {
+            width: 100px;
+        }
+
+        #cart-container table td:nth-child(1),
+        #cart-container table td:nth-child(2) {
+            width: 200px;
+        }
+
+        #cart-container table td:nth-child(3),
+        #cart-container table td:nth-child(4),
+        #cart-container table td:nth-child(5) {
+            width: 170px;
+        }
+
+        #cart-container table tr:nth-child(5) td {
+            border: none;
+        }
+
+        #cart-container table tr:nth-child(5) td h5 {
+            justify-content: center;
+        }
+
+        #coupon-container .coupon>div,
+        #coupon-container .total>div {
+            border: 1.5px solid black;
+        }
+
+        #coupon-container .coupon h5,
+        #coupon-container .total h5 {
+            background: coral;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            font-weight: 700;
+            border-bottom: 1.5px solid black;
+        }
+
+        #coupon-container .coupon p,
+        #coupon-container .coupon input {
+            padding: 0 12px;
+        }
+
+        #coupon-container .coupon input,
+        #coupon-container .coupon button {
+            height: 44px;
+            margin: 0 0 20px 12px;
+        }
+
+        #coupon-container .total>div>div {
+            padding: 0 12px;
+        }
+
+        #coupon-container .total>div>button {
+            margin: 0 12px 20px 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
+        <div class="container">
+            <img src="https://jawsafe.github.io/my-photos/e-commerce/image1/logo4(1).png" alt="logo">
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span><i id="bar" class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home-page.html">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop-page.html">shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog-page.html">blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">contacts</a>
+                    </li>
+                    <li class="nav-icon">
+                        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+                    <li class="nav-icon">
+                        <a href="#shop"><i class="fa-solid fa-bag-shopping active"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart section -->
+    <section id="cart" class="main-feature px-1 mt-5 pt-5">
+        <div class="container mt-5 pt-5">
+            <h2 class="heading">Shopping cart</h2>
+            <hr>
+        </div>
+    </section>
+
+    <!-- Cart container -->
+    <section id="cart-container" class="container-fluid my-5">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Product</td>
+                    <td>Product ID</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Cost</td>
+                    <td>Remove</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://jawsafe.github.io/my-photos/e-commerce/image4/shoes7.png" alt=".">
+                    </td>
+                    <td>
+                        <h5>Product</h5>
+                    </td>
+                    <td>
+                        <h5 id="price1">₱2579.89</h5>
+                    </td>
+                    <td><input id="quantity1" class="w-25 p-lg-1" type="number" min="1" value="1"></td>
+                    <td id="cost1"></td>
+                    <td><a href="#"><i class="fas fa-trash"></i></a></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://jawsafe.github.io/my-photos/e-commerce/image4/shoes4.png" alt=".">
+                    </td>
+                    <td>
+                        <h5>Product</h5>
+                    </td>
+                    <td>
+                        <h5 id="price2">₱2579.89</h5>
+                    </td>
+                    <td><input id="quantity2" class="w-25 p-lg-1" type="number" min="1" value="1"></td>
+                    <td id="cost2"></td>
+                    <td><a href="#"><i class="fas fa-trash"></i></a></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://jawsafe.github.io/my-photos/e-commerce/image4/shoes6.png" alt=".">
+                    </td>
+                    <td>
+                        <h5>Product</h5>
+                    </td>
+                    <td>
+                        <h5 id="price3">₱2579.89</h5>
+                    </td>
+                    <td><input id="quantity3" class="w-25 p-lg-1" type="number" min="1" value="1"></td>
+                    <td id="cost3"></td>
+                    <td><a href="#"><i class="fas fa-trash"></i></a></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://jawsafe.github.io/my-photos/e-commerce/image4/shoes5.png" alt=".">
+                    </td>
+                    <td>
+                        <h5>Product</h5>
+                    </td>
+                    <td>
+                        <h5 id="price4">₱2579.89</h5>
+                    </td>
+                    <td><input id="quantity4" class="w-25 p-lg-1" type="number" min="1" value="1"></td>
+                    <td id="cost4"></td>
+                    <td><a href="#"><i class="fas fa-trash"></i></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Coupon section -->
+    <section id="coupon-container" class="container">
+        <div class="row mx-1">
+            <div class="coupon col-lg-6 col-md-6 col-12 mb-5">
+                <div>
+                    <h5>Coupon & Discount</h5>
+                    <p>Enter the coupon code.</p>
+                    <input type="text" placeholder="Coupon code">
+                    <button class="shop-btn text-capitalize">Check coupon</button>
+                </div>
+            </div>
+            <div class="total col-lg-6 col-md-6 col-12 mb-3">
+                <div>
+                    <h5>Shopping Costs</h5>
+                    <div class="d-flex justify-content-between">
+                        <h6>Subtotal: </h6>
+                        <p id="subtotal"></p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h6>Shipping fee: </h6>
+                        <p id="ship-fee">₱159</p>
+                    </div>
+                    <hr class="">
+                    <div class="d-flex justify-content-between">
+                        <h6>Total costs: </h6>
+                        <p id="total-cost"></p>
+                    </div>
+                    <button class="shop-btn text-capitalize ms-auto">Check out</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="main-contact" id="contact">
+        <div class="row container info mx-auto pt-3">
+            <div class="first">
+                <img src="https://jawsafe.github.io/my-photos/e-commerce/image1/logo4(1).png" alt=".">
+                <!-- I am using fake address and fake other info-->
+                <h6>Address: </h6>
+                <p class="text-capitalize">1847 Santa Rita Street, Guadalupe Nuevo 1212 Quezon City, <br> Quezon City,
+                    9312635</p>
+                <h6>Contact number: </h6>
+                <p>907-723-2111</p>
+                <h6>Email address: </h6>
+                <p>adi.nugroho@email.com</p>
+                <div class="social-icon">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="second">
+                <h4>Support</h4>
+                <p>contact us</p>
+                <p>about page</p>
+                <p>size guide</p>
+                <p>shopping & returns</p>
+                <p>privacy</p>
+            </div>
+            <div class="third">
+                <h4>Shopping</h4>
+                <p>men's</p>
+                <p>women's</p>
+                <p>kid's</p>
+                <p>furniture</p>
+                <p>sales & discounts</p>
+            </div>
+            <div class="fourth">
+                <h4>Company</h4>
+                <p>about</p>
+                <p>blog</p>
+                <p>affiliate</p>
+                <p>login</p>
+            </div>
+            <div class="fifth">
+                <h4>subscribe</h4>
+                <p>Recieve updates, hot deals, discounts, & sales straight in your inbox daily.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <h3>Sample project by <a href="#">Jawsafe</a></h3>
+    </section>
+
+    <script>
+        for (let i = 1; i <= 4; i++) {
+            const priceElement = document.getElementById(`price${i}`);
+            const quantityElement = document.getElementById(`quantity${i}`);
+            const costElement = document.getElementById(`cost${i}`);
+
+            updatecost();
+
+            quantityElement.addEventListener('input', updatecost);
+
+            function updatecost() {
+                // Get the price and quantity values
+                const price = parseFloat(priceElement.innerText.replace('₱', ''));
+                const quantity = parseInt(quantityElement.value);
+
+                // Calculate the cost
+                const cost = price * quantity;
+
+                // Display the cost
+                costElement.innerText = `₱${cost.toFixed(2)}`;
+            }
+        }
+
+        // Get the cost elements
+        const costElements = document.querySelectorAll('[id^="cost"]');
+
+        // Get the total cost element
+        const subtotalElement = document.getElementById('subtotal');
+
+        // Initial update
+        updateSubCost();
+
+        // Attach event listeners to each cost element
+        costElements.forEach((costElement) => {
+            costElement.addEventListener('input', updateSubCost);
+        });
+
+        function updateSubCost() {
+            // Calculate the sum of all cost elements
+            const sum = Array.from(costElements).reduce((acc, element) => {
+                const value = parseFloat(element.innerText.replace('₱', '')) || 0;
+                return acc + value;
+            }, 0);
+
+            // Display the sum in the total cost element
+            subtotalElement.innerText = `₱${sum.toFixed(2)}`;
+        }
+
+        const subtotal = document.querySelectorAll('subtotal');
+        const shipFee = document.getElementById(`ship-fee`);
+        const totalCostElement = document.getElementById('total-cost');
+
+
+        updateTotalCost();
+
+        quantityElement.addEventListener('input', updateTotalCost);
+
+        function updateTotalCost() {
+            // Get the price and quantity values
+            const subtotalValue = parseFloat(subtotal.innerText.replace('₱', '')) || 0;
+            const shipFeeValue = parseFloat(shipFee.innerText.replace('₱', '')) || 0;
+
+            // Calculate the cost
+            const totalCostValue = subtotalValue + shipFeeValue;
+
+            // Display the cost
+            totalCost.innerText = `₱${totalCostValue.toFixed(2)}`;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="java.js"></script>
+</body>
+
+</html>
